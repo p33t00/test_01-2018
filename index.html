@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />	
+	<link href="css/font-awesome.min.css" rel="stylesheet"/>
+	<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous">
+    </script>
+</head>
+<body>
+	<div class="container">
+		<div class="content-back">
+			<header>
+				<div id="logo-wrap">
+					<a href="#" id="logo"></a>
+				</div>
+				<div id="header-icons">
+					<ul>
+						<li><i id="search" class="fa fa-search fa-lg"></i></li>
+						<li><i id="menu" class="fa fa-bars fa-lg"></i></li>
+					</ul>
+				</div>
+			</header>
+				<div>
+					<div id="search-box">
+						<input type="text" name="search">
+					</div>
+					<div id="menu-box">
+						<ul>
+							<li>
+								<label class="parent">Main</label>
+								<ul>
+									<li>sub 1</li>
+									<li>sub 2</li>
+								</ul>
+							</li>
+							<li>
+								<label class="parent">Some point</label>
+								<ul>
+									<li>sub 3</li>
+									<li>sub 4</li>
+								</ul>
+							</li>
+							<li>
+								<label class="parent">Another thing</label>
+								<ul>
+									<li>sub 5</li>
+									<li>sub 6</li>
+									<li>sub 7</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			<div class="popup-wrap">
+				<div>
+					<div id="popup">
+						<h3>Experts in co-creation</h3>
+						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. 
+						It has roots in a piece of classic.</p>
+						<button>Read more</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="arrow-down"><a href="#"></a></div>
+		<div class="content-table">
+			<div>
+				<div class="one-third">
+					<div id="html" class="sprite"></div>
+					<h1>HTML5</h1>
+					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classic.</p>
+					<button>Read more</button>
+				</div>
+				<div class="one-third">
+					<div id="css" class="sprite"></div>
+					<h1>CSS3</h1>
+					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classic.</p>
+					<button>Read more</button>
+				</div>
+				<div class="one-third">
+					<div id="js" class="sprite"></div>
+					<h1>JS</h1>
+					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classic.</p>
+					<button>Read more</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	$('#menu-box').hide();
+	$('#menu').click(function(){$('#menu-box').toggle(400);});
+	$('#search').click(function(){$('#menu-box').css("top", 90); $('#search-box').toggle(400);});
+	$('.parent').click(function(){$(this).siblings('ul').toggle(400);});
+</script>
+</body>
+</html>

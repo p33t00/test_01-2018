@@ -1,0 +1,316 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+
+html, body {
+	height: 100%;
+}
+
+* {
+	font-family: 'Alegreya Sans', sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+#header-icons li:hover, label:hover, li ul li:hover {
+	cursor: pointer;
+	color: cyan;
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+}
+
+li {
+	list-style: none;
+}
+
+.content-back {
+	height: 60%;
+	width: 100%;
+	background-image: url('../img/05-DPO.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 4px 0 5px black;
+}
+
+/*
+*	HEADER
+*/
+header {
+	padding: 1% 2.5%;
+	display: table;
+	width: 100%;
+	height: 70px;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+#header-icons {
+	float: right;
+	display: table;
+	height: 100%;
+}
+
+#logo {
+	width: 100px;
+	float: left;
+	background-image: url('../img/digitalist-logo.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	display: table-cell;
+	height: 100%;
+}
+
+#logo-wrap {
+	display: table-cell;
+	height: 100%;
+}
+
+#header-icons li{
+	list-style: none;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#header-icons li:last-child i {
+	margin-left: 20px;
+}
+
+#header-icons ul {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+header + div {
+	min-width: 200px;
+	background-color: white;
+	position: absolute;
+	top: 70px;
+	right: 0;
+	opacity: 0.8;
+	z-index: 2;
+}
+#search-box, #menu-box {
+	display: none;
+	padding: 10px;
+}
+
+#search-box > input {
+	width: 100%;
+}
+
+#menu-box ul ul {
+	display: none;
+}
+
+#menu-box li{
+	padding-left: 30px;
+}
+
+/*
+*	HEADER END
+*/
+
+/*
+*	POPUP
+*/
+#popup {
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 45px;
+	width: 300px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+#popup *{
+	color: white;
+}
+
+.popup-wrap {
+	display: table;
+	width: 100%;
+	height: 100%;
+	margin-top: -69px;
+	padding-top: 70px;
+}
+
+.popup-wrap > div{
+	width: 100%;
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+
+button:hover {
+	cursor: pointer;
+}
+button {
+	background-color: green;
+	border: none;
+	border-radius: 5px;
+	padding: 4px 10px;
+	font-weight: bold;
+	color: white;
+	font-size: 12px;
+	box-shadow: 1px 1px 1px black;
+}
+
+#popup p {
+	padding: 15px 0;
+	text-align: left;
+}
+/*
+*	POPUP END
+*/
+
+#arrow-down {
+	width: 50px;
+	height: 50px;
+	background-image: url('../img/arrow.png');
+	position: relative;
+	top: -5px;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -50px;
+	background-position: center;
+	background-size: cover;
+}
+
+/*
+*	LOWER CONTENT
+*/
+.content-table {
+	display: table;
+	height: 40%;
+}
+
+.content-table > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.one-third {
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	padding: 10px 20px;
+}
+
+.one-third div{
+	display: block;
+	height: 330px;
+}
+
+.one-third p{
+	margin: 15px 45px;
+}
+
+.one-third .sprite {
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+}
+
+#html {
+	background: url(../img/frontweb.png) -14px -18px no-repeat;
+	background-size: 250%;
+}
+#css {
+	background: url(../img/frontweb.png) -15px -149px no-repeat;
+	background-size: 250%;
+}
+#js {
+	background: url(../img/frontweb.png) -14px -18px no-repeat;
+	background-size: 250%;
+}
+
+/*
+*	LOWER CONTENT END
+*/
+
+
+
+@media (orientation: landscape) and (max-height: 600px) and (min-height: 300px) {
+	.content-back {
+	    height: initial;
+		min-height: 60%;
+	}
+	#arrow-down {
+		display: none;
+	}
+	#popup {
+		margin: 0 auto;
+		text-align: center;
+		padding: 10px 45px;
+		width: 100%;
+		border-radius: 0;
+		background: rgba(0, 0, 0, 0.8);
+	}
+	.one-third p {
+	    margin: 15px 0; 
+	}
+	#menu-box {
+		display: table;
+		width: 100%;
+		opacity: 0.9;
+		z-index: 2;
+	}
+	#menu-box > ul > li {
+		display: table-cell;
+	    vertical-align: top;
+		float: left;
+		width: 33.3%;
+		padding: 0 15px 0 30px;
+	}
+	header + div {
+		width: 100%;
+		opacity: 0.9;
+	}
+}
+
+@media (max-width: 550px) {
+	.content-back {
+		min-height: 60%;
+	}
+	header {
+		padding: 1% 10%;
+	}
+	.one-third {
+		margin: 15px 0;
+		float: none;
+		width: 100%;
+		margin-bottom: 20px 0;
+	}
+	.one-third p {
+	    margin: 5px 45px;
+	}
+	#arrow-down {
+		display: none;
+	}
+	.popup-wrap > div {
+		vertical-align: bottom;
+	}
+	#popup {
+		margin: 0 auto;
+		text-align: center;
+		padding: 20px 45px;
+		width: 100%;
+		border-radius: 0;
+		background: rgba(0, 0, 0, 0.8);
+	}
+	#menu-box {
+		width: 100%;
+		opacity: 0.9;
+		z-index: 2;
+	}
+	#menu-box li{
+		padding-left: 30px;
+	}
+	header + div {
+		width: 100%;
+		opacity: 0.9;
+	}
+}
